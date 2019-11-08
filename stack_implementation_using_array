@@ -1,0 +1,46 @@
+//implementation of stack using array (LIFO)
+//you have to maintain a top element in stack
+#include<iostream>
+using namespace std;
+#define MAX 100
+
+int stk[MAX];
+int top=-1;
+
+void push(int stk[],int x)
+{	
+if(top>MAX)
+cout<<"stack overflow";
+	top++;
+	stk[top]=x;
+	
+}
+
+void pop(int stk[])
+{
+	int x ;
+	if(stk[top]==-1)
+	cout<<"stack is empty";
+	
+	x=stk[top];
+	top--;
+	
+}
+
+void print(int stk[])
+{
+	for(int i=0;i<sizeof(stk[MAX]);i++)
+	cout<<stk[i]<<endl;
+}
+
+int main()
+{
+	push(stk,1);
+	push(stk,2);
+	push(stk,3);
+	push(stk,4);
+	push(stk,5);
+	pop(stk);
+	print(stk);
+	return 0;
+}
